@@ -11,17 +11,18 @@ module.exports = (sequelize, DataTypes) => {
      */
         static associate(models) {
             // define association here
-            this.belongsTo(models.Company, {
-                foreignKey: 'companyId',
-                allowNull: false
-            });
+            CompanyScores.belongsTo(models.Companies);
+            models.Companies.hasOne(CompanyScores);
         }
     }
     CompanyScores.init({
-        companyId: DataTypes.STRING,
         name: DataTypes.STRING,
         score: DataTypes.FLOAT,
-        sector: DataTypes.STRING
+        sector: DataTypes.STRING,
+        companyId: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        }
     }, {
         sequelize,
         modelName: 'CompanyScores',

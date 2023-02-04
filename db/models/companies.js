@@ -11,14 +11,12 @@ module.exports = (sequelize, DataTypes) => {
      */
         static associate(models) {
             // define association here
-            this.hasOne(models.CompanyScores);
         }
     }
     Companies.init({
-        companyId: { 
+        companyId: {
             type: DataTypes.STRING,
             allowNull: false,
-            primaryKey: true
         },
         name: DataTypes.STRING,
         description: DataTypes.TEXT,
