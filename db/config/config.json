@@ -4,13 +4,19 @@
     "password": "postgres328722",
     "database": "backend_eval_db",
     "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "define": {
+      "timestamps": false
+    }
   },
   "test": {
     "username": "postgres",
     "password": "postgres328722",
     "database": "backend_eval_db",
     "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "define": {
+      "timestamps": false
+    }
   }
 }

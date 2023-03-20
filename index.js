@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3002;
 const router = require('./src/routes/routes');
 
-app.route('/', router);
+app.use('/api', router);
 app.use(express.json());
 
 app.listen(PORT, () => {

@@ -5,14 +5,15 @@ module.exports = {
         await queryInterface.createTable('Companies', {
             id: {
                 allowNull: false,
-                autoIncrement: true,
-                primaryKey: true,
-                type: Sequelize.INTEGER
+                unique: true,
+                type: Sequelize.STRING
             },
             companyId: {
                 type: Sequelize.STRING,
                 allowNull: false,
-                unique: true,
+                primaryKey: true,
+                onUpdate: 'CASCADE',
+                onDelete: 'CASCADE'
             },
             name: {
                 type: Sequelize.STRING

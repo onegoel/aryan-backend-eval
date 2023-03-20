@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
         name: DataTypes.STRING,
         score: DataTypes.FLOAT,
         sector: DataTypes.STRING,
-        companyId: {
+        CompanyId: {
             type: DataTypes.STRING,
             allowNull: false,
         }
